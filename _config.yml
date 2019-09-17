@@ -5,8 +5,8 @@
 title: Sth0nian
 description: |
   Scrap your infra from IAC<br>
-  DevOps pipelines run on<br>
-  Gitlab -> Terraform -> GCP/AWS
+  DevOps pipelines running on<br>
+  Gitlab -> Terraform -> GCP / AWS
 owner: King Toi Ho # or company name
 first_published: 2019 # if migrating another site, the year of your first publish
 email: kingtoi@gmail.com
