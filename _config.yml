@@ -2,8 +2,9 @@
 #
 
 # Site settings
-title: Sth0nian
+title: Sth0nian Migrations
 description: |
+  <h3>by King Toi Ho</h3>
   Scrap your infra for IAC<br>
   DevOps pipelines running on<br>
   Gitlab -> Terraform -> GCP / AWS
