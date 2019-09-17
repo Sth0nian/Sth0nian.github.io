@@ -4,14 +4,14 @@
 # Site settings
 title: Sth0nian
 description: |
-  Scrap your infra from IAC<br>
+  Scrap your infra for IAC<br>
   DevOps pipelines running on<br>
   Gitlab -> Terraform -> GCP / AWS
 owner: King Toi Ho # or company name
 first_published: 2019 # if migrating another site, the year of your first publish
 email: kingtoi@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sth0nian.github.io" # the base hostname & protocol for your site
+url: "https://sth0nian.xyz/" # the base hostname & protocol for your site
 social:
   github: https://github.com/Sth0nian
   email: kingtoi@gmail.copm
