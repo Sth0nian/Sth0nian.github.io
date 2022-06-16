@@ -88,3 +88,12 @@ h1 {
 #maintext {
   text-align: left;
 }
+#userdeets  {
+  text-align: left;
+  font-size: 1rem;
+}
+#userprofile {
+  border-radius: 50%;
+  height:66px;
+  width:66px
+}

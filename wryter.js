@@ -20,7 +20,7 @@ function setKeyHandlers() {
     console.log('clicked')
     $('.burger').toggleClass('rotate');
     $("#overlay").slideToggle()
-    
+
   });
   $("#apibutton").click(function (e) {
     $("#keybox").slideToggle()
@@ -34,10 +34,30 @@ function setKeyHandlers() {
   $('#keybox').keypress(function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode == '13') {
-      $("#overlay").hide()
+      $("#overlay").slideUp()
+      $("#userdeets").slideDown();
+      getUser($("#textboxapikey").val())
     }
   });
 
+}
+async function getUser(key) {
+  console.log(key + " found")
+  $.ajax({
+    url: 'https://api.medium.com/v1/me',
+    type: 'GET',
+    dataType: 'jsonp',
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('Authorization', 'Bearer ' + key);
+    },
+    data: {},
+    success: function (res) {
+      console.log('found user ' + res.data.name)
+      $("#username").text(res.data.name)
+      $("#userprofile").attr("src",res.data.imageUrl)
+    },
+    error: function (err) {},
+  });
 }
 
 function customiseTrix() {
@@ -88,7 +108,7 @@ async function initDB() {
     }
   }).then(function (configDoc) {
     console.log(configDoc.autosave)
-    if(configDoc.autosave!=""){
+    if (configDoc.autosave != "") {
       console.log("autosave exists!")
       $("[trix-id=1]").html(configDoc.autosave)
     }
