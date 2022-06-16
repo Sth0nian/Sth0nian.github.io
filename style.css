@@ -1,25 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: #fdfdfd;
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
 }
+
 main {
   max-width: 900px;
   margin: auto;
   padding: 0.5rem;
   text-align: center;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 ul {
   list-style: none;
   display: flex;
@@ -28,10 +33,59 @@ ul {
 li {
   margin-right: 1rem;
 }
+
 h1 {
   color: #1628c4;
   margin-bottom: 0.5rem;
 }
 
+#textboxapikey {
+  width: 300px;
+  line-height: 25px;
+  text-align: left;
+}
 
-  
+.editable {
+  text-align: left;
+}
+.menucontainer{
+  line-height:66px;
+}
+.topmenuitem {
+  display: none;
+}
+
+.burger {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(180deg) translateZ(0);
+}
+.rotate {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(0deg) translateZ(0);
+}
+
+#menuicon:hover {
+  cursor: pointer;
+}
+.previewcontainer {
+  display: none;
+}
+.trixcontainer {
+  font-size: 1rem;
+  text-align: left;
+}
+.trixcontainer ul{
+  display: block;
+  list-style: unset;
+  padding: 1em;
+}
+.trixcontainer ol {
+  display: block;
+  list-style: decimal;
+  padding: 1em;
+}
+#maintext {
+  text-align: left;
+}

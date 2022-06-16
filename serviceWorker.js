@@ -4,7 +4,6 @@ const toCache = [
   "/index.html",
   "/style.css",
   "/wryter.js",
-  "/status.js",
   "/idb.js",
   "/favicon.ico"
 ];
