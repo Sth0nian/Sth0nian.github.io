@@ -46,7 +46,7 @@ async function getUser(key) {
   $.ajax({
     url: 'https://api.medium.com/v1/me',
     type: 'GET',
-    dataType: 'jsonp',
+    dataType: 'json',
     beforeSend: function (xhr) {
       xhr.setRequestHeader('Authorization', 'Bearer ' + key);
     },
