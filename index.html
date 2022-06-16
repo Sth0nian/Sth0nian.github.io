@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266360639598062" crossorigin="anonymous"></script>
     <link rel='manifest' href='pwa.webmanifest'>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="trix.css">
@@ -14,18 +15,16 @@
       <nav>
         <h1>wryter</h1>
         <ul class="menucontainer">
-          <li id="keybox" style="display:none;"><input id="textboxapikey" type="text"></li>
-          <li class="topmenuitem"><span id="apibutton">apikey</span></li>
-          <li class="topmenuitem"><span id="myarticles">articles</span></li>
-          <li class="topmenuitem"><span id="medium">medium</span></li>
           <li class="burger"><span id="menuicon">+</span></li>
         </ul>
       </nav>
+      <div id="overlay" style="display:none">
+        <span id="apibutton">apikey : </span><span id="keybox"><input id="textboxapikey" type="text"></span>
+        
+      </div>
       <div class="trixcontainer">
         <trix-editor></trix-editor>
       </div>
-      <div class="bottom"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266360639598062"
-        crossorigin="anonymous"></script></div>
     </main>
     <script src="pouchdb.js"></script>
     <script src="jquery.min.js"></script>

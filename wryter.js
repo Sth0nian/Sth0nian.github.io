@@ -19,9 +19,8 @@ function setKeyHandlers() {
   $("#menuicon").click(function () {
     console.log('clicked')
     $('.burger').toggleClass('rotate');
-    $("#keybox").hide()
-    $(".topmenuitem").slideToggle()
-
+    $("#overlay").slideToggle()
+    
   });
   $("#apibutton").click(function (e) {
     $("#keybox").slideToggle()
@@ -35,7 +34,7 @@ function setKeyHandlers() {
   $('#keybox').keypress(function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode == '13') {
-      $("#keybox").slideToggle()
+      $("#overlay").hide()
     }
   });
 
