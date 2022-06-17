@@ -43,21 +43,40 @@ function setKeyHandlers() {
 }
 async function getUser(key) {
   console.log(key + " found")
-  $.ajax({
-    url: 'https://api.medium.com/v1/me',
-    type: 'GET',
-    dataType: 'json',
-    beforeSend: function (xhr) {
-      xhr.setRequestHeader('Authorization', 'Bearer ' + key);
-    },
-    data: {},
-    success: function (res) {
-      console.log('found user ' + res.data.name)
-      $("#username").text(res.data.name)
-      $("#userprofile").attr("src",res.data.imageUrl)
-    },
-    error: function (err) {},
-  });
+  // $.ajax({
+  //   url: 'https://api.medium.com/v1/me',
+  //   type: 'GET',
+  //   dataType: 'json',
+  //   crossDomain:true,
+  //   contentType: "application/json; charset=utf-8",
+  //   async:true,
+  //   beforeSend: function (xhr) {
+  //     xhr.setRequestHeader("Access-Control-Allow-Origin", "https://api.medium.com/v1/me");
+  //     xhr.setRequestHeader('Authorization', 'Bearer ' + key);
+  //   },
+  //   success: function (res) {
+  //     console.log('found user ' + res.data.name)
+  //     $("#username").text(res.data.name)
+  //     $("#userprofile").attr("src",res.data.imageUrl)
+  //   },
+  //   error: function (err) {},
+  // });
+var settings = {
+  "url": "https://api.medium.com/v1/me",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Authorization": "Bearer "+key,
+    "Cookie": "sid=1:0WuE6dxD205uISDPWTHx60dAtI+m8Zr0meb/ZjM9yG++Jp9ubVb19EVrAfuDHkE2; uid=lo_71be17e14468"
+  },
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 }
 
 function customiseTrix() {
